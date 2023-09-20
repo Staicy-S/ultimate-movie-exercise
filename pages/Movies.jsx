@@ -1,5 +1,7 @@
 import axios from "axios";
 import { useState, useEffect } from "react";
+import { Link } from "react-router-dom";
+import "../src/App.css";
 
 export function Movies() {
   const [movies, setMovies] = useState([]);
@@ -12,6 +14,7 @@ export function Movies() {
       .then(({ data }) => {
         setMovies(data);
         console.log(data);
+        // console.log(data.id);
       })
       .catch(() => {
         console.log("catching the error 🐛");
@@ -19,21 +22,23 @@ export function Movies() {
       .finally(() => {
         console.log("Request is done 🦋");
       });
-  });
+  }, []);
 
   return (
     <>
       <h3>I am the movie page 🎬</h3>
 
-      <p>
-        {movies.map((movie) => {
-          return (
-            <>
-              <p>{movie.title}</p>
-            </>
-          );
-        })}
-      </p>
+      {movies.map((movie) => {
+        return (
+          <Link
+            to={`/movies/` + movie.id}
+            key={movie.id}
+            className="movie-links"
+          >
+            {movie.title}
+          </Link>
+        );
+      })}
     </>
   );
 }
