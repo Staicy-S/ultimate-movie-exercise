@@ -1,0 +1,26 @@
+nav {
+  background-color: rgba(0, 0, 0, 0.343);
+  padding: 10px 0;
+}
+
+ul {
+  list-style: none;
+  display: flex;
+  justify-content: space-around;
+  padding: 0;
+}
+
+.nav-link {
+  color: white;
+  letter-spacing: 0.1e;
+  transition: 100ms;
+}
+
+.nav-link:hover {
+  color: rgb(150, 150, 241);
+  transition: 100ms;
+}
+
+.nav-link:active {
+  color: red;
+}
