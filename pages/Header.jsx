@@ -6,13 +6,13 @@ export function Header() {
     <>
       <nav>
         <ul>
-          <NavLink className="nav-link" activeClassName="selected" to="/">
+          <NavLink className="nav-link" to="/">
             <li>Home</li>
           </NavLink>
-          <NavLink className="nav-link" activeClassName="selected" to="/movies">
+          <NavLink className="nav-link" to="/movies">
             <li>Movies</li>
           </NavLink>
-          <NavLink className="nav-link" activeClassName="selected" to="/actors">
+          <NavLink className="nav-link" to="/actors">
             <li>Actors</li>
           </NavLink>
         </ul>
