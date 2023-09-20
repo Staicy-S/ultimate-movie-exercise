@@ -15,3 +15,46 @@
 .actor-link:hover {
   color: rgb(81, 174, 255);
 }
+
+img.thumbnail {
+  width: 400px;
+  border-radius: 10px;
+}
+
+img.actors-portrait {
+  width: 400px;
+  border-radius: 10px;
+}
+
+h4.loading-spinner {
+  height: 100px;
+}
+
+ol li {
+  list-style: none;
+  color: aliceblue;
+}
+
+ol li:hover {
+  color: rgb(101, 183, 255);
+}
+
+.loader {
+  width: 48px;
+  height: 48px;
+  border: 5px solid #fff;
+  border-bottom-color: transparent;
+  border-radius: 50%;
+  display: inline-block;
+  box-sizing: border-box;
+  animation: rotation 1s linear infinite;
+}
+
+@keyframes rotation {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}

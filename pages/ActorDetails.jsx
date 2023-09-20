@@ -1,6 +1,7 @@
 import { useParams } from "react-router-dom";
 import { useEffect, useState } from "react";
 import axios from "axios";
+import "../src/App.css";
 
 export function ActorDetails() {
   const [actorDetails, setActorDetails] = useState();
@@ -22,13 +23,16 @@ export function ActorDetails() {
       .finally(() => {
         console.log("Request is done 🦋");
       });
-  }, []);
+  }, [actorUrl]);
 
   if (!actorDetails) {
     return (
       <>
         <h3>I am the actor details page 🔬🌟</h3>
-        <p>Loading</p>
+
+        <h4 className="loading-spinner">
+          <span className="loader"></span>
+        </h4>
       </>
     );
   }
@@ -44,6 +48,7 @@ export function ActorDetails() {
           <img
             src={actorDetails.image}
             alt={`Portrait of ` + actorDetails.name}
+            className="actors-portrait"
           />
         </figure>
       </>

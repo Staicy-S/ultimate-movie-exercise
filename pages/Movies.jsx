@@ -24,6 +24,14 @@ export function Movies() {
       });
   }, []);
 
+  if (movies.length === 0) {
+    return (
+      <h4 className="loading-spinner">
+        <span className="loader"></span>
+      </h4>
+    );
+  }
+
   return (
     <>
       <h3>I am the movie page 🎬</h3>

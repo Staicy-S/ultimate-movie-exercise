@@ -21,6 +21,14 @@ export function Actors() {
         console.log("Request is done 🦋");
       });
   }, []);
+
+  if (actors.length === 0) {
+    return (
+      <h4 className="loading-spinner">
+        <span className="loader"></span>
+      </h4>
+    );
+  }
   return (
     <>
       <h3>I am the actors page 🌟</h3>
