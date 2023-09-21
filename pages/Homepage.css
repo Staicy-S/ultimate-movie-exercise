@@ -1,0 +1,22 @@
+section {
+  text-align: center;
+}
+
+h1 {
+  padding: 15px;
+}
+
+img.random-movie {
+  border-radius: 10px;
+  border: 2px solid white;
+  max-width: 70%;
+}
+
+figure.random-movie {
+  background-color: rgba(0, 0, 0, 0.325);
+  padding: 20px 20px 5px;
+}
+
+figcaption {
+  font-size: 1.2em;
+}
