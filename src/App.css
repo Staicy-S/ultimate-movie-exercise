@@ -26,6 +26,7 @@ img.actors-portrait {
 
 h4.loading-spinner {
   height: 100px;
+  text-align: center;
 }
 
 ol li {

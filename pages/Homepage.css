@@ -7,6 +7,10 @@ h1 {
   padding: 15px;
 }
 
+p {
+  text-align: center;
+}
+
 img.random-movie {
   border-radius: 10px;
   border: 2px solid white;

@@ -1,6 +1,7 @@
 import { Link, useParams } from "react-router-dom";
 import { useEffect, useState } from "react";
 import axios from "axios";
+import "/pages/Movies.css";
 
 export function MovieDetails() {
   const [movieDetails, setMovieDetails] = useState();
@@ -38,22 +39,23 @@ export function MovieDetails() {
   if (movieDetails) {
     return (
       <>
-        <h4>🔬🎬 Take a closer look at... </h4>
-        <h3>{movieDetails.title}</h3>
-        <figure>
+        <h2>🎬 {movieDetails.title}</h2>
+        <figure className="thumbnail">
           <img
             className="thumbnail"
             src={movieDetails.image}
             alt={`Thumbnail of` + movieDetails.title}
           />
         </figure>
-        Main characters from {movieDetails.title}
+        <h3>Main characters from {movieDetails.title}</h3>
         <ol>
           {movieDetails.cast.map((castmember) => {
             return (
-              <Link to={`/actors/` + castmember.id} key={castmember.id}>
-                <li>{castmember.character}</li>
-              </Link>
+              <li key={castmember.id}>
+                <Link className="cast-members" to={`/actors/` + castmember.id}>
+                  {castmember.character}
+                </Link>
+              </li>
             );
           })}
         </ol>

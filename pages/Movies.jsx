@@ -46,7 +46,7 @@ export function Movies() {
                 </Link>
               </h3>
               <figure>
-                <Link>
+                <Link to={`/movies/` + movie.id}>
                   <img
                     className="teaser"
                     src={movie.thumbnail}

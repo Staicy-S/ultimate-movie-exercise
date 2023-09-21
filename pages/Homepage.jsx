@@ -27,7 +27,13 @@ export function Homepage() {
   }, []);
 
   if (!randomMovie) {
-    return <p>Loading</p>;
+    return (
+      <>
+        <h4 className="loading-spinner">
+          <span className="loader"></span>
+        </h4>
+      </>
+    );
   }
 
   return (

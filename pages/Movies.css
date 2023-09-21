@@ -1,3 +1,20 @@
+h3 {
+  text-align: center;
+}
+
+ol {
+  text-align: center;
+  padding: 0;
+}
+
+.cast-members {
+  color: white;
+}
+
+.cast-members:hover {
+  color: rgb(86, 148, 255);
+}
+
 img.teaser {
   width: 200px;
   border: 1px solid white;
@@ -9,4 +26,14 @@ img.teaser:hover {
   transform: scale(1.1);
   transition: ease-in 100ms;
   border: 1px solid rgb(255, 245, 104);
+}
+
+figure.thumbnail {
+  display: flex;
+  justify-content: center;
+}
+
+img.thumbnail {
+  border: 1px solid white;
+  max-width: 400px;
 }
