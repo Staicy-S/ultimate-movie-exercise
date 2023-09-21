@@ -33,7 +33,7 @@ export function Homepage() {
   return (
     <>
       <section>
-        <h1>Welcome to the Ultimate Movie Guide</h1>
+        <h1 className="h1">Welcome to the Ultimate Movie Guide</h1>
         <figure className="random-movie">
           <Link to={`movies/` + randomMovie.id}>
             <img

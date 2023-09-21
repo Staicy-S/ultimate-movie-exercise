@@ -2,6 +2,7 @@ import axios from "axios";
 import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import "../src/App.css";
+import "/pages/Actors.css";
 
 export function Actors() {
   const [actors, setActors] = useState([]);
@@ -31,19 +32,18 @@ export function Actors() {
   }
   return (
     <>
-      <h3>I am the actors page 🌟</h3>
-
-      {actors.map((actor) => {
-        return (
-          <Link
-            className="actor-link"
-            to={`/actors/` + actor.id}
-            key={actor.id}
-          >
-            {actor.name}{" "}
-          </Link>
-        );
-      })}
+      <h2>Popular Actors 🌟</h2>
+      <section>
+        {actors.map((actor) => {
+          return (
+            <h3 key={actor.id}>
+              <Link className="actor-link" to={`/actors/` + actor.id}>
+                {actor.name}{" "}
+              </Link>
+            </h3>
+          );
+        })}
+      </section>
     </>
   );
 }

@@ -2,6 +2,7 @@ import axios from "axios";
 import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import "../src/App.css";
+import "/pages/Movies.css";
 
 export function Movies() {
   const [movies, setMovies] = useState([]);
@@ -34,19 +35,29 @@ export function Movies() {
 
   return (
     <>
-      <h3>I am the movie page 🎬</h3>
-
-      {movies.map((movie) => {
-        return (
-          <Link
-            to={`/movies/` + movie.id}
-            key={movie.id}
-            className="movie-links"
-          >
-            {movie.title}
-          </Link>
-        );
-      })}
+      <section>
+        <h2>Popular Movies 🎬</h2>
+        {movies.map((movie) => {
+          return (
+            <article key={movie.id}>
+              <h3>
+                <Link to={`/movies/` + movie.id} className="movie-links">
+                  {movie.title}
+                </Link>
+              </h3>
+              <figure>
+                <Link>
+                  <img
+                    className="teaser"
+                    src={movie.thumbnail}
+                    alt={`thumbnail of` + movie.thumbnail}
+                  />
+                </Link>
+              </figure>
+            </article>
+          );
+        })}
+      </section>
     </>
   );
 }
